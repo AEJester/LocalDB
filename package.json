@@ -1,6 +1,6 @@
 {
-  "name": "localdb",
-  "version": "0.0.1",
+  "name": "datavault",
+  "version": "1.0.0",
   "description": "A package for storing values in key-value pairs for NodeJS applications.",
   "main": "index.js",
   "scripts": {
@@ -8,19 +8,21 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/AEJester/LocalDB.git"
+    "url": "git+https://github.com/AEJester/datavault.git"
   },
   "keywords": [
-    "LocalDB",
+    "datavault",
     "storage",
     "key",
     "value",
-    "database"
+    "database",
+    "data",
+    "vault"
   ],
   "author": "AEJester",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/AEJester/LocalDB/issues"
+    "url": "https://github.com/AEJester/datavault/issues"
   },
-  "homepage": "https://github.com/AEJester/LocalDB#readme"
+  "homepage": "https://github.com/AEJester/datavault#readme"
 }
