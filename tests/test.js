@@ -1,7 +1,4 @@
-let datachest = require("../npm/index");
+let datachest = require("../dist/index");
 
-datachest.init();
-datachest.create("names");
-datachest.store("name", "Ryan", "names");
-let x = datachest.get("name", "names", "Not there");
+let x = datachest.search("name", ["passwords", "usernames", "emails"]);
 console.log(x);

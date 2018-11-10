@@ -6,6 +6,7 @@ const store = require("../src/store");
 const init = require("../src/init");
 const get = require("../src/get");
 const remove = require("../src/remove");
+const search = require("../src/search");
 
 program
 .version(require("../package.json").version)
@@ -53,6 +54,20 @@ program
 .alias("rm")
 .action((database) => {
     remove(database);
-})
+});
+
+program
+.command("search <key> <database>")
+.description("Searches the given databse(s) for the key. The <database> param defaults to \"*\" if nothing is put.")
+.alias("s")
+.action((key, database) => {
+    let x;
+    if (!database) {
+        x = search(key, "*");
+    } else {
+        x = search(key, database);
+    }
+    console.log(x);
+});
 
 program.parse(process.argv);
