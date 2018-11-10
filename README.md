@@ -19,4 +19,4 @@ console.log(x);
 ```
 
 # table
-An example table can be found in the `tests/tables` directory.
+An example table can be found in the `tests/database` directory.
