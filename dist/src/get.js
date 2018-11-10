@@ -7,7 +7,7 @@ const fs = require("fs");
  */
 const get = (key, database, nonexistant="0") => {
     let raw_data;
-    raw_data = fs.readFileSync(`./tables/${database}.json`, "utf8");
+    raw_data = fs.readFileSync(`./database/${database}.json`, "utf8");
     let data = JSON.parse(raw_data);
     let tf = false;
     let pair = 0;

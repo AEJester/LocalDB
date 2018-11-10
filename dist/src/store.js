@@ -10,11 +10,11 @@ const store = (key, value, database) => {
         throw new Error("You cannot have a key with the name default, as it interferes with the default value");
     }
     let raw_data;
-    raw_data = fs.readFileSync(`./tables/${database}.json`, "utf8");
+    raw_data = fs.readFileSync(`./database/${database}.json`, "utf8");
     let data = JSON.parse(raw_data);
     data.pairs.push({key:key,value:value});
     let new_data = JSON.stringify(data);
-    fs.writeFileSync(`./tables/${database}.json`, new_data);
+    fs.writeFileSync(`./database/${database}.json`, new_data);
 }
 
 module.exports = store;
