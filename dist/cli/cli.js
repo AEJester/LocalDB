@@ -7,6 +7,7 @@ const init = require("../src/init");
 const get = require("../src/get");
 const remove = require("../src/remove");
 const search = require("../src/search");
+const list = require("../src/list");
 
 program
 .version(require("../package.json").version)
@@ -67,6 +68,15 @@ program
     } else {
         x = search(key, database);
     }
+    console.log(x);
+});
+
+program
+.command("list")
+.description("Lists all the databases in the /database/ folder")
+.alias("ls")
+.action(() => {
+    let x = list();
     console.log(x);
 });
 

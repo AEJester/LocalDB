@@ -1,6 +1,6 @@
 {
   "name": "data-chest",
-  "version": "2.2.3",
+  "version": "2.3.2",
   "description": "A package for storing values in key-value pairs for NodeJS applications.",
   "main": "index.js",
   "scripts": {
