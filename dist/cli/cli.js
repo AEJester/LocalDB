@@ -44,4 +44,6 @@ program
     } else {
         console.log(get(key, database));
     }
-})
+});
+
+program.parse(process.argv);
