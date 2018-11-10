@@ -1,14 +1,21 @@
 const fs = require("fs");
+/**
+ * Creates a database.
+ * @param {string} name - The name to give the new database
+ */
 const create = (name) => {
-    fs.open(`./tables/${name}.json`, "w", (err) => {
+    fs.openSync(`./tables/${name}.json`, "w", (err) => {
         if (err) throw err;
     });
     let content = {
-        pairs: []
+        pairs: [
+            {
+                "key": "default",
+                "value": "0"
+            }
+        ]
     }
-    fs.writeFile(`./tables/${name}.json`, JSON.stringify(content), (err) => {
-        if (err) throw err;
-    });
+    fs.writeFileSync(`./tables/${name}.json`, JSON.stringify(content));
 }
 
 module.exports = create;

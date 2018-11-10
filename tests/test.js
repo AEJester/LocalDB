@@ -1,5 +1,7 @@
-let LocalDB = require("../index");
+let datachest = require("../index");
 
-LocalDB.init();
-LocalDB.create("names");
-LocalDB.store("name", "Ryan", "names");
+datachest.init();
+datachest.create("names");
+datachest.store("name", "Ryan", "names");
+let x = datachest.get("name", "names", "Not there");
+console.log(x);
