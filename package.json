@@ -1,5 +1,5 @@
 {
-  "name": "datavault",
+  "name": "data-chest",
   "version": "1.0.0",
   "description": "A package for storing values in key-value pairs for NodeJS applications.",
   "main": "index.js",
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/AEJester/datavault.git"
+    "url": "git+https://github.com/AEJester/data-chest.git"
   },
   "keywords": [
     "datavault",
@@ -22,7 +22,7 @@
   "author": "AEJester",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/AEJester/datavault/issues"
+    "url": "https://github.com/AEJester/data-chest/issues"
   },
-  "homepage": "https://github.com/AEJester/datavault#readme"
+  "homepage": "https://github.com/AEJester/data-chest#readme"
 }
