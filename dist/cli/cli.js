@@ -57,7 +57,7 @@ program
 });
 
 program
-.command("search <key> <database>")
+.command("search <key> [database]")
 .description("Searches the given databse(s) for the key. The <database> param defaults to \"*\" if nothing is put.")
 .alias("s")
 .action((key, database) => {
