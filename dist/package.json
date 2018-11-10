@@ -26,7 +26,7 @@
   },
   "homepage": "https://github.com/AEJester/data-chest#readme",
   "bin": {
-    "datachest": "./cli/cli.js"
+    "data-chest": "./cli/cli.js"
   },
   "dependencies": {
     "commander": "^2.19.0"
