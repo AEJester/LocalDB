@@ -1,4 +1,4 @@
-let datachest = require("../index");
+let datachest = require("../npm/index");
 
 datachest.init();
 datachest.create("names");
