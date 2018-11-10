@@ -5,6 +5,7 @@ const create = require("../src/create");
 const store = require("../src/store");
 const init = require("../src/init");
 const get = require("../src/get");
+const remove = require("../src/remove");
 
 program
 .version(require("../package.json").version)
@@ -45,5 +46,13 @@ program
         console.log(get(key, database));
     }
 });
+
+program
+.command("remove <database>")
+.description("Removes a database from the tatabase folder.")
+.alias("rm")
+.action((database) => {
+    remove(database);
+})
 
 program.parse(process.argv);
