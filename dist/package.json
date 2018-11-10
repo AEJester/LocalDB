@@ -1,6 +1,6 @@
 {
   "name": "data-chest",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "A package for storing values in key-value pairs for NodeJS applications.",
   "main": "index.js",
   "scripts": {
@@ -26,7 +26,7 @@
   },
   "homepage": "https://github.com/AEJester/data-chest#readme",
   "bin": {
-    "datachest": "./cli.js"
+    "datachest": "./cli/cli.js"
   },
   "dependencies": {
     "commander": "^2.19.0"
