@@ -1,0 +1,26 @@
+{
+  "name": "localdb",
+  "version": "0.0.1",
+  "description": "A package for storing values in key-value pairs for NodeJS applications.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AEJester/LocalDB.git"
+  },
+  "keywords": [
+    "LocalDB",
+    "storage",
+    "key",
+    "value",
+    "database"
+  ],
+  "author": "AEJester",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AEJester/LocalDB/issues"
+  },
+  "homepage": "https://github.com/AEJester/LocalDB#readme"
+}
