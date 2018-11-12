@@ -8,6 +8,7 @@ const get = require("../src/get");
 const remove = require("../src/remove");
 const search = require("../src/search");
 const list = require("../src/list");
+const clear = require("../src/clear");
 
 program
 .version(require("../package.json").version)
@@ -79,5 +80,13 @@ program
     let x = list();
     console.log(x);
 });
+
+program
+.command("clear <database>")
+.description("Resets the database with default values")
+.alias("cl")
+.action((database) => {
+    clear(database);
+})
 
 program.parse(process.argv);
