@@ -6,6 +6,7 @@ const remove = require("./src/remove");
 const search = require("./src/search");
 const list = require("./src/list");
 const clear = require("./src/clear");
+const clearTag = require("./src/cleartag");
 
 const lib = {
     create: create,
@@ -15,7 +16,8 @@ const lib = {
     remove: remove,
     search: search,
     list: list,
-    clear: clear
+    clear: clear,
+    clearTag: clearTag
 };
 
 module.exports = lib;

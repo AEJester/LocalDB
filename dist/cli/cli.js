@@ -9,6 +9,7 @@ const remove = require("../src/remove");
 const search = require("../src/search");
 const list = require("../src/list");
 const clear = require("../src/clear");
+const clearTag = require("../src/cleartag");
 
 program
 .version(require("../package.json").version)
@@ -87,6 +88,14 @@ program
 .alias("cl")
 .action((database) => {
     clear(database);
+})
+
+program
+.command("clear-tag <key> <database>")
+.description("Removes the key and value from the given database.")
+.alias("ct")
+.action((key, database) => {
+    clearTag(key, database);
 })
 
 program.parse(process.argv);
