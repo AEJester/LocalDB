@@ -1,5 +1,7 @@
 const fs = require("fs");
-
+/**
+ * Lists all the databases that exist.
+ */
 const list = () => {
     let items = fs.readdirSync("./database/");
     let finalized = [];

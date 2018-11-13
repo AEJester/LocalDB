@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Source: store.js</title>
+    <title>JSDoc: Source: list.js</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,7 +17,7 @@
 
 <div id="main">
 
-    <h1 class="page-title">Source: store.js</h1>
+    <h1 class="page-title">Source: list.js</h1>
 
     
 
@@ -28,24 +28,18 @@
         <article>
             <pre class="prettyprint source linenums"><code>const fs = require("fs");
 /**
- * 
- * @param {string} key - The name given to the value
- * @param {string} value - The value stored under the key
- * @param {string} database - The database to retrieve the information from
+ * Lists all the databases that exist.
  */
-const store = (key, value, database) => {
-    if (key.toLowerCase() == "default") {
-        throw new Error("You cannot have a key with the name default, as it interferes with the default value");
+const list = () => {
+    let items = fs.readdirSync("./database/");
+    let finalized = [];
+    for (let i = 0; i &lt; items.length; i++) {
+        finalized.push(items[i].replace(".json", ""));
     }
-    let raw_data;
-    raw_data = fs.readFileSync(`./database/${database}.json`, "utf8");
-    let data = JSON.parse(raw_data);
-    data.pairs.push({key:key,value:value});
-    let new_data = JSON.stringify(data);
-    fs.writeFileSync(`./database/${database}.json`, new_data);
+    return finalized;
 }
 
-module.exports = store;</code></pre>
+module.exports = list;</code></pre>
         </article>
     </section>
 

@@ -41,27 +41,6 @@ const search = (key, databases="*") => {
                     }
                 }
             }
-        } else {
-            let passed = false;
-            let items = fs.readdirSync("./database/");
-            for (let i = 0; i < items.length; i++) {
-                if (items[i].replace(".json", "") == databases) {
-                    passed = true;
-                }
-            }
-            if (passed == true) {
-                for (let i = 0; i < items.length; i++) {
-                    let raw_data = fs.readFileSync("./database/"+items[i], "utf8");
-                    let data = JSON.parse(raw_data);
-                    for (let x = 0; x < data.pairs.length; x++) {
-                        if (data.pairs[x].key == key) {
-                            results.push({key:data.pairs[x].key,value:data.pairs[x].value,database:items[i].replace(".json", "")});
-                        }
-                    }
-                }
-            } else {
-                throw new Error("No database found.");
-            }
         }
     } else {
         console.log(typeof databases)
