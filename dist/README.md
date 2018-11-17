@@ -2,10 +2,10 @@
 A package for storing values in key-value pairs for NodeJS applications.
 
 # install
-Do the followingcommand in console:\n
-`npm i data-chest`\n
-To get the CLI:\n
-`npm i -g data-chest`\n
+Do the followingcommand in console:
+`npm i data-chest`
+To get the CLI:
+`npm i -g data-chest`
 
 # docs
 Visit http://datachest.tk/ for the documentation of this.
@@ -69,10 +69,10 @@ This returns
 An example table can be found in the `tests/database` directory.
 
 # cli
-If you globally installed data-chest, you get access to a CLI.\n
-Do:\n
-`data-chest -h`\n
-For help. You can also use the alias command `dc`.\n
-Use:\n
-`dc -h`\n
-if you do not feel like typing out the full name.\n
+If you globally installed data-chest, you get access to a CLI.
+Do:
+`data-chest -h`
+For help. You can also use the alias command `dc`.
+Use:
+`dc -h`
+if you do not feel like typing out the full name.
