@@ -98,4 +98,11 @@ program
     clearTag(key, database);
 })
 
+program
+.command("wipe")
+.description("Wipes all the databases of their data.")
+.alias("wp")
+.action(() => {
+    wipe();
+});
 program.parse(process.argv);
