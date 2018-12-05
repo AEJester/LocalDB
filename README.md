@@ -13,15 +13,56 @@ Visit http://datachest.tk/ for the documentation of this.
 # example
 
 ```js
-let datachest = require("data-chest");
+var data = require("data-chest");
+//initializes database storage
+data.init();
 
-datachest.init(); //goes at start of program
+//creates a database
+data.create("grades");
+data.create("missing");
 
-datachest.create("names");
-datachest.store("name", "Ryan", "names");
-let x = datachest.get("name", "names", "Not there");
+//stores a value
+data.store("Term Paper", "92%", "grades");
+data.store("Journal", "96%", "grades");
+
+data.store("Term Paper", "no", "missing");
+data.store("Journal", "no", "missing");
+
+//get a value from the database
+let x = data.get("Term Paper", "grades");
 console.log(x);
-//logs "Ryan"
+x = data.get("Journal", "grades");
+console.log(x);
+
+//search for a value
+let y = data.search("Term Paper", "*");
+console.log(y);
+y = data.search("Journal", "*");
+console.log(y);
+
+//clear a tag from a database
+data.clearTag("Term Paper", "grades");
+
+//clear a database entirely
+data.clear("grades");
+
+//remove a database
+data.remove("grades");
+
+
+//list all databases
+data.list();
+```
+
+This returns
+```
+92%
+96%
+[ { key: 'Term Paper', value: '92%', database: 'grades' },
+  { key: 'Term Paper', value: 'no', database: 'missing' } ]
+[ { key: 'Journal', value: '96%', database: 'grades' },
+  { key: 'Journal', value: 'no', database: 'missing' } ]
+[ 'missing' ]
 ```
 
 # table
@@ -33,5 +74,5 @@ Do:
 `data-chest -h`
 For help. You can also use the alias command `dc`.
 Use:
-`dc -h` 
+`dc -h`
 if you do not feel like typing out the full name.
