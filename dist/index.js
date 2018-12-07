@@ -8,6 +8,7 @@ const list = require("./src/list");
 const clear = require("./src/clear");
 const clearTag = require("./src/cleartag");
 const wipe = require("./src/wipe");
+const backup = require("./src/backup");
 
 const lib = {
     create: create,
@@ -19,7 +20,8 @@ const lib = {
     list: list,
     clear: clear,
     clearTag: clearTag,
-    wipe: wipe
+    wipe: wipe,
+    backup, backup
 };
 
 module.exports = lib;

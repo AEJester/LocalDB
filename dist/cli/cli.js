@@ -10,6 +10,7 @@ const search = require("../src/search");
 const list = require("../src/list");
 const clear = require("../src/clear");
 const clearTag = require("../src/cleartag");
+const backup = require("../src/backup");
 
 program
 .version(require("../package.json").version)
@@ -105,4 +106,16 @@ program
 .action(() => {
     wipe();
 });
+
+program
+.command("backup [name]")
+.description("Create a backup of the databases.")
+.alias("bk")
+.action((name) => {
+    if (name) {
+        backup(name);
+    } else {
+        backup();
+    }
+})
 program.parse(process.argv);

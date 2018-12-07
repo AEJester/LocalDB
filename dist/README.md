@@ -52,6 +52,9 @@ data.remove("grades");
 
 //list all databases
 data.list();
+
+//creates a backup of the databases with an optional name.
+data.backup();
 ```
 
 This returns
@@ -63,6 +66,8 @@ This returns
 [ { key: 'Journal', value: '96%', database: 'grades' },
   { key: 'Journal', value: 'no', database: 'missing' } ]
 [ 'missing' ]
+Created a backup of grades
+Created a backup of missing
 ```
 
 # table
