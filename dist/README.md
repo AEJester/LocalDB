@@ -66,7 +66,6 @@ This returns
 [ { key: 'Journal', value: '96%', database: 'grades' },
   { key: 'Journal', value: 'no', database: 'missing' } ]
 [ 'missing' ]
-Created a backup of grades
 Created a backup of missing
 ```
 
