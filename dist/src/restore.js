@@ -16,4 +16,4 @@ const restore = (backup_name) => {
     
 }
 
-module.exports = backup;
+module.exports = restore;

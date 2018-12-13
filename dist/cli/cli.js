@@ -11,6 +11,8 @@ const list = require("../src/list");
 const clear = require("../src/clear");
 const clearTag = require("../src/cleartag");
 const backup = require("../src/backup");
+const wipe = require("../src/wipe");
+const restore = require("../src/restore");
 
 program
 .version(require("../package.json").version)
@@ -117,5 +119,14 @@ program
     } else {
         backup();
     }
-})
+});
+
+program
+.command("restore <backup>")
+.description("Restore a backup of the specified data.")
+.alias("rs")
+.action((name) => {
+    restore(name);
+});
+
 program.parse(process.argv);

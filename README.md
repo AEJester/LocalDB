@@ -1,6 +1,9 @@
 # data-chest
 A package for storing values in key-value pairs for NodeJS applications.
 
+[![1.1k Downloads](https://img.shields.io/badge/downloads-1.1k-red.svg)](https://npmjs.com/package/data-chest)
+
+
 # install
 Do the followingcommand in console:
 `npm i data-chest`
