@@ -10,6 +10,7 @@ const clearTag = require("./src/cleartag");
 const wipe = require("./src/wipe");
 const backup = require("./src/backup");
 const restore = require("./src/restore");
+const reset = require("./src/reset");
 
 const lib = {
     create: create,
@@ -23,7 +24,8 @@ const lib = {
     clearTag: clearTag,
     wipe: wipe,
     backup, backup,
-    restore: restore
+    restore: restore,
+    reset: reset
 };
 
 module.exports = lib;

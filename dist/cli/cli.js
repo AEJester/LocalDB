@@ -13,6 +13,7 @@ const clearTag = require("../src/cleartag");
 const backup = require("../src/backup");
 const wipe = require("../src/wipe");
 const restore = require("../src/restore");
+const reset = require("../src/reset");
 
 program
 .version(require("../package.json").version)
@@ -124,9 +125,17 @@ program
 program
 .command("restore <backup>")
 .description("Restore a backup of the specified data.")
-.alias("rs")
+.alias("rt")
 .action((name) => {
     restore(name);
+});
+
+program
+.command("reset")
+.description("Resets the database folder to an empty state.")
+.alias("rs")
+.action(() => {
+    reset();
 });
 
 program.parse(process.argv);
