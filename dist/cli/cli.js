@@ -14,6 +14,7 @@ const backup = require("../src/backup");
 const wipe = require("../src/wipe");
 const restore = require("../src/restore");
 const reset = require("../src/reset");
+const run = require("../src/lang-api/lang-run-query")
 
 program
 .version(require("../package.json").version)
@@ -136,6 +137,14 @@ program
 .alias("rs")
 .action(() => {
     reset();
+});
+
+program
+.command("run <file>")
+.description("Run a .dq (data query) file.")
+.alias("rn")
+.action((file) => {
+  run(file);
 });
 
 program.parse(process.argv);

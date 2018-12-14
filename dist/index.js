@@ -11,6 +11,7 @@ const wipe = require("./src/wipe");
 const backup = require("./src/backup");
 const restore = require("./src/restore");
 const reset = require("./src/reset");
+const run = require("./src/lang-api/lang-run-query");
 
 const lib = {
     create: create,
@@ -23,9 +24,10 @@ const lib = {
     clear: clear,
     clearTag: clearTag,
     wipe: wipe,
-    backup, backup,
+    backup: backup,
     restore: restore,
-    reset: reset
+    reset: reset,
+    run: run
 };
 
 module.exports = lib;
